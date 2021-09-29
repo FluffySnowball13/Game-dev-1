@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
         // makes the p rotate left and right
-        transform.Rotate(Vector3.forward, turnSpeed * Time.deltaTime * hInput);
+        transform.Rotate(Vector3.back, turnSpeed * Time.deltaTime * hInput);
         // makes the p move foward and back
         transform.Translate(Vector3.right * speed * Time.deltaTime * vInput);
         // Creates right wall
