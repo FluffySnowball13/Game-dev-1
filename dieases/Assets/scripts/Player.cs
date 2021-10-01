@@ -11,6 +11,11 @@ public class Player : MonoBehaviour
     public float xRange = 9.17f;
     public float yRange = 4.45f;
 
+    public bool canShoot = true;
+
+    public GameObject projectile;
+    public Transform firePoint; 
+
  // Update is called once per frame
     void Update()
     {
@@ -42,6 +47,17 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(transform.position.x, yRange, transform.position.z);
         }
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+           
+            Shoot();
+        }
+
         
+    }
+
+    private void Shoot()
+    {
+        Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
     }
 }
