@@ -617,10 +617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cc9cb24cdfa4268828cc1779d19536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  lookSensitivity: 1
-  maxLookX: 0
-  minLookX: 0
+  moveSpeed: 15
+  jumpForce: 5
+  lookSensitivity: 3
+  maxLookX: 45
+  minLookX: -45
 --- !u!54 &1990509144
 Rigidbody:
   m_ObjectHideFlags: 0
