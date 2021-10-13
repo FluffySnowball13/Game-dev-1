@@ -26,7 +26,17 @@ public class Enemy : MonoBehaviour{
         moveCharacter(movement);
 
     }
+    // Occures at a fixed rate per frame
     void moveCharacter(Vector2 direction){
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("projectile"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

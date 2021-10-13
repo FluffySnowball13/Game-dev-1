@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("player") && gameManager.hasKey)
+        if(other.CompareTag("Player") && gameManager.hasKey)
         {
             print("you have unlocked the door!"); 
         }
