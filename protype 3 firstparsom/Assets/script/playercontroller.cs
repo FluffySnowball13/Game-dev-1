@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playercontroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //movement
     public float moveSpeed;
@@ -16,12 +16,16 @@ public class playercontroller : MonoBehaviour
     // GameObjects & Components
     private Camera cam;
     private Rigidbody rb;
+    private Weapon weapon;
 
     void Awake()
     {
         //Get the components
         cam = Camera.main; 
         rb = GetComponent<Rigidbody>();
+        weapon = GetComponent<Weapon>();
+        // Disable Cursor
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
      // Update is called once per frame
@@ -32,6 +36,14 @@ public class playercontroller : MonoBehaviour
         // Jump when spacebar is pressed
         if(Input.GetButtonDown("Jump"))
         Jump();
+
+        if(Input.GetButton("Fire1"))
+        {
+            if(weapon.CanShoot())
+            {
+                weapon.Shoot();
+            }
+        }
     }
     void Move()
     {
