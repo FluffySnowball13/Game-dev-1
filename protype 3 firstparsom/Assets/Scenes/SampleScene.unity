@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 1990509144}
   - component: {fileID: 1990509143}
   - component: {fileID: 1990509149}
+  - component: {fileID: 1990509150}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -827,13 +828,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9012503cefe0e4edeb9cf4159f7f0372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5546711519787084588, guid: dc7aa71c4840a45f3a08412e9a7c3e7a, type: 3}
+  bulletPool: {fileID: 1990509150}
   muzzle: {fileID: 2076551286}
-  bulletSpeed: 100
+  bulletSpeed: 45
   curAmmo: 0
   mazAmmo: 0
   infiniteAmmo: 1
   shootRate: 0.05
+--- !u!114 &1990509150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990509142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecfef60c94d374fa8b525dfe38853b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objPrefab: {fileID: 5546711519787084588, guid: dc7aa71c4840a45f3a08412e9a7c3e7a, type: 3}
+  createOnStart: 10
 --- !u!1 &2076551285
 GameObject:
   m_ObjectHideFlags: 0
