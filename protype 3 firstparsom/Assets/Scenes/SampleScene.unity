@@ -959,6 +959,7 @@ GameObject:
   - component: {fileID: 1647841574}
   - component: {fileID: 1647841573}
   - component: {fileID: 1647841572}
+  - component: {fileID: 1647841579}
   m_Layer: 0
   m_Name: emeny
   m_TagString: Untagged
@@ -994,7 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1647841572}
   muzzle: {fileID: 1914723166}
-  bulletSpeed: 45
+  bulletSpeed: 10
   curAmmo: 0
   mazAmmo: 0
   infiniteAmmo: 1
@@ -1093,6 +1094,24 @@ Transform:
   m_Father: {fileID: 532211995}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647841579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647841571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399b9b9d8f06a444d8c2225d0dae37ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHP: 1
+  maxHP: 1
+  scoretoGive: 1000
+  moveSpeed: 3
+  attackRange: 5
+  yPathOffset: 1
 --- !u!1 &1699352528
 GameObject:
   m_ObjectHideFlags: 0
