@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject)
+        Destroy(gameObject);
     }
     // Update is called once per frame
     void Update()

@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public float bulletSpeed;
 
     public int curAmmo;
-    public int mazAmmo;
+    public int maxAmmo;
     public bool infiniteAmmo;
 
 

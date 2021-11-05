@@ -962,8 +962,8 @@ GameObject:
   - component: {fileID: 1647841579}
   m_Layer: 0
   m_Name: emeny
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Enemy
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -996,9 +996,9 @@ MonoBehaviour:
   bulletPool: {fileID: 1647841572}
   muzzle: {fileID: 1914723166}
   bulletSpeed: 10
-  curAmmo: 0
-  mazAmmo: 0
-  infiniteAmmo: 1
+  curAmmo: 500
+  maxAmmo: 500
+  infiniteAmmo: 0
   shootRate: 0.05
 --- !u!54 &1647841574
 Rigidbody:
@@ -1106,8 +1106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399b9b9d8f06a444d8c2225d0dae37ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHP: 1
-  maxHP: 1
+  curHP: 10
+  maxHP: 10
   scoretoGive: 1000
   moveSpeed: 3
   attackRange: 5
@@ -1350,8 +1350,8 @@ GameObject:
   - component: {fileID: 1990509150}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Player
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1372,6 +1372,8 @@ MonoBehaviour:
   lookSensitivity: 3
   maxLookX: 45
   minLookX: -45
+  curHP: 500
+  maxHP: 500
 --- !u!54 &1990509144
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1480,10 +1482,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1990509150}
   muzzle: {fileID: 2076551286}
-  bulletSpeed: 45
-  curAmmo: 0
-  mazAmmo: 0
-  infiniteAmmo: 1
+  bulletSpeed: 20
+  curAmmo: 100
+  maxAmmo: 100
+  infiniteAmmo: 0
   shootRate: 0.05
 --- !u!114 &1990509150
 MonoBehaviour:
