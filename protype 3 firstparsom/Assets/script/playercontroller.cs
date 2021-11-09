@@ -38,8 +38,10 @@ public class PlayerController : MonoBehaviour
     }
     void Die()
     {
-        
+
     }
+
+   
      // Update is called once per frame
     void Update()
     {

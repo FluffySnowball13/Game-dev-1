@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 1647841572}
   - component: {fileID: 1647841579}
   m_Layer: 0
-  m_Name: emeny
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1372,8 +1372,8 @@ MonoBehaviour:
   lookSensitivity: 3
   maxLookX: 45
   minLookX: -45
-  curHP: 500
-  maxHP: 500
+  curHP: 10
+  maxHP: 10
 --- !u!54 &1990509144
 Rigidbody:
   m_ObjectHideFlags: 0
