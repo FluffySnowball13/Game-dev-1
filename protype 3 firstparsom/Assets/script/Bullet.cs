@@ -34,5 +34,9 @@ public class Bullet : MonoBehaviour
     {
        if(Time.time - shootTime >= lifetime)
         gameObject.SetActive(false); 
+        //Disable Bullet
+        gameObject.SetActive(false);
+        //Create the hit particle effect
+        GameObject obj = Instantiate(hitParticle)
     }
 }
