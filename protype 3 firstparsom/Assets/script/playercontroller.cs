@@ -91,6 +91,18 @@ public class PlayerController : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(-rotX,0,0);
         transform.eulerAngles += Vector3.up * y; 
     }
+    public void TakeDamage(int damage)
+    {
+        curHP -= damage;
+
+        if(curHP <= 0)
+            Die();
+            
+    }
+    void Die()
+    {
+        print("You have died");
+    }
 
        public void GiveHealth (int amountToGive)
     {
