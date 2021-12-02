@@ -18,19 +18,13 @@ public class Pickup : MonoBehaviour
     public float bobSpeed;
     public float bobHeight;
 
-    private Vector3
+    private Vector3 startPos;
     private bool bobbingUp;
 
-    void start()
+    void Start()
     {
         //Set start pos
         startPos = tamsform.position;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
  
     void OnTriggerEnter(Collider other)
@@ -55,14 +49,13 @@ public class Pickup : MonoBehaviour
          
         }
     }
-    // Update is called once per frame
     void Update()
     {
         //Rotating
         transform.Roatate(Vector3.up, rotationSpeed + Time.deltaTime);
 
         //
-        Vector3 offset = (bobbingUp == true ? new Vector3(0,bobHeight /2, 0)) : new Vector3(0, -bobHeight /2, 0);
+        Vector3 offset = (bobbingUp == true ? new Vector3(0,bobHeight /2, 0) : new Vector3(0, -bobHeight /2, 0));
         transform.position = Vector3.MoveTowards(transform.position, startpos + offset, bobSpeed + Time.deltaTime);
         
         if(transform.position == startpPos + offset)
