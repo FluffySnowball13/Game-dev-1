@@ -24,7 +24,7 @@ public class Pickup : MonoBehaviour
     void Start()
     {
         //Set start pos
-        startPos = tamsform.position;
+        startPos = transform.position;
     }
  
     void OnTriggerEnter(Collider other)
@@ -52,13 +52,13 @@ public class Pickup : MonoBehaviour
     void Update()
     {
         //Rotating
-        transform.Roatate(Vector3.up, rotationSpeed + Time.deltaTime);
+        transform.Rotate(Vector3.up, rotationSpeed + Time.deltaTime);
 
         //
         Vector3 offset = (bobbingUp == true ? new Vector3(0,bobHeight /2, 0) : new Vector3(0, -bobHeight /2, 0));
-        transform.position = Vector3.MoveTowards(transform.position, startpos + offset, bobSpeed + Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, startPos + offset, bobSpeed + Time.deltaTime);
         
-        if(transform.position == startpPos + offset)
+        if(transform.position == startPos + offset)
             bobbingUp = !bobbingUp;
     }
 }

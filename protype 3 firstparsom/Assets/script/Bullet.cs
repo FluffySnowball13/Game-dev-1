@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     private float shootTime;
 
-    public gameObject hitParticle;
+    public GameObject hitParticle;
 
     void OnEnable()
     {
