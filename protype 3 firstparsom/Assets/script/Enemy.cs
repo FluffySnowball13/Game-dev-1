@@ -66,7 +66,11 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        rb.constraints = RigidbodyConstaints.None;
+        rb.AddForce(Vector3.back * 10, ForceMode.Impulse);
+         rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+         GameManager.instance.AddScore(scoretoGive);
+        Destroy(gameObject,1);
     }
     // Update is called once per frame
     void Update()
