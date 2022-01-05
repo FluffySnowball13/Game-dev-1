@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameUi : MonoBehaviour
 {
     [Header("HUD")]
-    public TextMeshProGUI scoreText;
-    public TextMeshProGUI ammoText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI ammoText;
     public Image healthBarFill;
 
     [Header("Pause Menu")]
@@ -71,7 +71,7 @@ public class GameUi : MonoBehaviour
 
         public void OnResumeButton()
         {
-
+            GameManager.instance.TogglePauseGame();
         }
         public void OnRestartButton()
         {

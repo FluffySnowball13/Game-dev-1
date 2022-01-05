@@ -33,9 +33,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //initialize the UI
-        GameUI.instance.UpdateHealthBar(curHP, maxHP);
-        GameUI.instance.UpdateScoreText(0);
-        GameUI.instance.UpdateAmmoText(weapon.curAmmo,weapon.maxAmmo);
+        GameUi.instance.UpdateHealthBar(curHP, maxHP);
+        GameUi.instance.UpdateScoreText(0);
+        GameUi.instance.UpdateAmmoText(weapon.curAmmo,weapon.maxAmmo);
     }
 
     public void TakeDamage(int damage)
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         curHP -= damage;
         if(curHP <= 0)
             Die();
-        GameUI.instance.UpdateHealthBar(curHP, maxHP);
+        GameUi.instance.UpdateHealthBar(curHP, maxHP);
     }
     void Die()
     {
@@ -109,13 +109,13 @@ public class PlayerController : MonoBehaviour
        public void GiveHealth (int amountToGive)
     {
         curHP = Mathf.Clamp(curHP + amountToGive, 0, maxHP);
-        GameUI.instance.UpdateHealthBar(curHP, maxHP);
+        GameUi.instance.UpdateHealthBar(curHP, maxHP);
     }
 
     public void GiveAmmo (int amountToGive)
     {
         weapon.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
-        GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
+        GameUi.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
     }
 }
 
