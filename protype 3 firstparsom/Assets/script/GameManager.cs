@@ -59,13 +59,13 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
             //set Game Screen
-            GameUi.instance.SetEndGameScreenGameScreen(true,curScore);
+            GameUi.instance.GetEndGameScreen(true,curScore);
     }
 
     public void LoseGame()
     {
         //Set the end game screen
-        GameUi.instance.GetEndgameScreen(false, curScore);
+        GameUi.instance.GetEndGameScreen(false, curScore);
         Time.timeScale = 0.0f;
         gamePaused = true;
     }
